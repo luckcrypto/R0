@@ -6,7 +6,8 @@
 
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-<meta name="theme-color" content="#15111F">
+<meta name="theme-color" content="#f5f6f9" id="themeColorMeta">
+<script>(function(){var d=document.documentElement,dark=false;try{dark=localStorage.getItem("luck-theme")==="dark";}catch(e){}if(!dark)d.classList.add("light");var m=document.getElementById("themeColorMeta");if(m)m.setAttribute("content",dark?"#131022":"#f5f6f9");})();</script>
 <title>What is Luck? Preparation Meeting Opportunity | Luck.fyi</title>
 <meta name="description" content="Luck isn’t fortune or fate — it’s preparation meeting opportunity. From the 1-in-10¹³⁹ odds of winning every lottery on Luck.fyi to finding Bitcoin in 2009, here’s what luck really is — and why ‘they just got lucky’ misses the point.">
 <link rel="canonical" href="https://luck.fyi/what-is-luck.html">
@@ -279,7 +280,7 @@ html{overflow-x:hidden}
   .mn-feat .fcta{align-self:flex-start;display:inline-flex;align-items:center;gap:.4em;font-family:var(--display);font-weight:700;font-size:.82rem;color:#241b04;background:linear-gradient(135deg,var(--gold),var(--gold-deep));padding:.55em 1em;border-radius:999px;transition:transform .15s,filter .15s}
   .mn-feat .fcta:hover{transform:translateY(-2px);filter:brightness(1.06)}
 
-  .mn-cta{flex:0 0 auto;display:inline-flex;align-items:center;font-family:var(--display);font-weight:700;font-size:.9rem;padding:.62em 1.25em;border-radius:999px;color:#241b04;background:linear-gradient(135deg,var(--gold),var(--gold-deep));box-shadow:0 12px 26px -12px rgba(255,204,87,.6);transition:transform .16s,filter .16s;margin-left:6px}
+  .mn-cta{flex:0 0 auto;display:inline-flex;align-items:center;font-family:var(--display);font-weight:700;font-size:.9rem;padding:.62em 1.25em;border-radius:999px;color:#241b04;background:linear-gradient(135deg,#f7b500,#e09600);box-shadow:0 12px 26px -12px rgba(255,204,87,.6);transition:transform .16s,filter .16s;margin-left:6px}
   .mn-cta:hover{transform:translateY(-2px);filter:brightness(1.06)}
 
   .mn-burger{display:none;flex:0 0 auto;margin-left:auto;width:44px;height:44px;border:1px solid var(--line-2);border-radius:12px;background:rgba(255,255,255,.05);cursor:pointer;position:relative}
@@ -336,14 +337,14 @@ html{overflow-x:hidden}
   .mf-news{display:flex;gap:8px;max-width:330px}
   .mf-news input{flex:1;min-width:0;background:var(--ink);border:1px solid var(--line-2);border-radius:10px;color:var(--text);font-family:var(--body);font-size:.86rem;padding:.6em .8em}
   .mf-news input:focus{outline:none;border-color:var(--gold)}
-  .mf-news button{flex:0 0 auto;font-family:var(--display);font-weight:700;font-size:.82rem;border:0;cursor:pointer;border-radius:10px;padding:0 1em;color:#241b04;background:linear-gradient(135deg,var(--gold),var(--gold-deep));transition:filter .15s}
+  .mf-news button{flex:0 0 auto;font-family:var(--display);font-weight:700;font-size:.82rem;border:0;cursor:pointer;border-radius:10px;padding:0 1em;color:#fff;background:linear-gradient(135deg,#7c3aed,#5b21b6);transition:filter .15s}
   .mf-news button:hover{filter:brightness(1.06)}
   .mf-news-note{font-size:.72rem;color:var(--muted);margin:.6em 0 1.1em}
   .mf-soc{display:flex;flex-wrap:wrap;gap:8px}
   .mf-soc a{display:inline-flex;align-items:center;font-family:var(--display);font-weight:600;font-size:.76rem;color:var(--muted);border:1px solid var(--line-2);border-radius:999px;padding:.4em .8em;transition:.15s}
   .mf-soc a:hover{color:var(--gold);border-color:var(--gold)}
-  .mf-soc a.vip{color:#05283a;background:linear-gradient(135deg,#2aabee,#229ed9);border-color:transparent}
-  .mf-soc a.vip:hover{filter:brightness(1.07);color:#05283a;border-color:transparent}
+  .mf-soc a.vip{color:#fff;background:linear-gradient(135deg,#1577b0,#0d5688);border-color:transparent}
+  .mf-soc a.vip:hover{filter:brightness(1.08);color:#fff;border-color:transparent}
   .mf h4{font-family:var(--display);font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);margin-bottom:14px;opacity:.92}
   .mf ul{list-style:none;margin:0;padding:0}.mf li{margin-bottom:9px}
   .mf li a{color:var(--muted);font-size:.87rem;transition:color .15s,padding-left .15s}.mf li a:hover{color:var(--gold);padding-left:3px}
@@ -419,6 +420,82 @@ html{overflow-x:hidden}
 .lk-cta{display:flex;flex-wrap:wrap;gap:12px;justify-content:center;margin-top:30px}
 @media(max-width:560px){.lk-cta .btn{width:100%;text-align:center}}
 @media(max-width:600px){.lk-hero>.wrap,.lk-sec{padding-left:26px;padding-right:26px}}
+</style>
+<style>/* AOS self-contained — no external file needed */
+[data-aos^=fade]{opacity:0;transition-property:opacity,transform}
+[data-aos^=fade].aos-animate{opacity:1;transform:translateZ(0)}
+[data-aos=fade]{transform:none}
+[data-aos=fade-up]{transform:translate3d(0,100px,0)}
+[data-aos=fade-down]{transform:translate3d(0,-100px,0)}
+[data-aos=fade-left]{transform:translate3d(100px,0,0)}
+[data-aos=fade-right]{transform:translate3d(-100px,0,0)}
+[data-aos^=zoom]{opacity:0;transition-property:opacity,transform}
+[data-aos^=zoom].aos-animate{opacity:1;transform:translateZ(0) scale(1)}
+[data-aos=zoom-in]{transform:scale(.6)}
+[data-aos=zoom-out]{transform:scale(1.2)}
+[data-aos]{transition-duration:.6s;transition-timing-function:cubic-bezier(.25,.46,.45,.94)}
+[data-aos][data-aos-duration="400"]{transition-duration:.4s}[data-aos][data-aos-duration="600"]{transition-duration:.6s}[data-aos][data-aos-duration="800"]{transition-duration:.8s}[data-aos][data-aos-duration="1000"]{transition-duration:1s}[data-aos][data-aos-duration="1200"]{transition-duration:1.2s}[data-aos][data-aos-duration="1500"]{transition-duration:1.5s}
+@media (prefers-reduced-motion:reduce){[data-aos]{opacity:1!important;transform:none!important;transition:none!important}}
+</style>
+<style id="theme-light">
+html{background-color:var(--ink)}
+/* =========================================================================
+   LIGHT THEME v2 — intentional palette: clean layered surfaces, near-black
+   text, defined borders, deeper accents, a visible hover on everything.
+   Dark theme stays the default :root; every rule here is html.light-scoped.
+   ========================================================================= */
+html.light{
+  --ink:#e8ebf1;          /* page: soft cool gray so white cards lift off it */
+  --ink-2:#ffffff;        /* cards / raised surfaces */
+  --ink-3:#f2f4f8;        /* inset / alt surface */
+  --line:rgba(17,21,38,.12);
+  --line-2:rgba(17,21,38,.22);
+  --text:#11141a;         /* near-black primary */
+  --muted:#454c5c;        /* secondary, >7:1 on white */
+  --violet:#6a34cc;
+  --crimson:#c2123f; --crimson-2:#8a0f30;
+  --mint:#0a7d45;
+  --gold:#8a6309; --gold-deep:#6f4f07;     /* deep gold for TEXT / links */
+  --shadow:0 12px 30px -14px rgba(17,21,38,.18);
+}
+/* clean page — a whisper of cool depth only, no muddy warm wash */
+html.light body{background:radial-gradient(1200px 720px at 85% -15%,rgba(106,52,204,.05),transparent 60%),var(--ink) !important}
+/* re-brighten gold ONLY where it is a BACKGROUND carrying dark text */
+html.light :is(.btn:not(.ghost):not(.crimson),.mn-cta,.fcta,.chip.solid,.btn--gold,.lc-btn,.cta,.badge,.tag,.on,.switch.on,.gtab.on,.lc-chip.on,.key.on,.mc-game.on,.load-more,.prem,.pop,.coin){--gold:#e8b23e;--gold-deep:#cf991f}
+/* ---- surfaces: flat white, defined edge, soft lift (kills the washed look) ---- */
+html.light :is(.fact,.tool,.tier,.card,.gen,.panel,.scard,.ccard,.gencard,.goalcard,.ucard,.step,.tcard,.stepcard,.cdbox,.sg,.snap,.tg,.statcard,.qcard,.oddscard,.ptier,.navcard,.dir-col,.cf-goal,.qa,.note){background:var(--ink-2);border-color:var(--line);box-shadow:0 1px 2px rgba(17,21,38,.04),0 12px 28px -20px rgba(17,21,38,.22)}
+/* interactive cards lift on hover */
+html.light :is(.fact,.tool,.tier,.card,.gen,.scard,.ccard,.gencard,.goalcard,.ucard,.tcard,.stepcard,.statcard,.qcard,.oddscard,.ptier,.navcard):hover{border-color:var(--line-2);box-shadow:0 2px 4px rgba(17,21,38,.06),0 20px 40px -20px rgba(17,21,38,.30)}
+/* ---- nav: white shell + menus, visible hovers ---- */
+html.light .mn-shell{background:#ffffff}
+html.light .mn-panel,html.light .mn-drawer{background:#ffffff}
+html.light .mn-burger,html.light .mn-theme{background:rgba(17,21,38,.05)}
+html.light :is(.mn-link,.mn-shop,.mn-sub-top,.mn-mlink,.mn-direct):hover{background:rgba(17,21,38,.06);color:var(--text)}
+/* ---- buttons + states ---- */
+html.light .btn.ghost{border-color:var(--line-2);color:var(--text)}
+html.light .btn.ghost:hover{border-color:var(--gold);color:var(--gold);background:rgba(138,99,9,.07)}
+html.light .chip{border-color:var(--line-2);color:var(--text)}
+html.light .chip:hover{border-color:var(--gold);color:var(--gold);background:rgba(138,99,9,.07)}
+/* ---- inputs ---- */
+html.light :is(input,select,textarea){background:#fff;border-color:var(--line-2);color:var(--text)}
+html.light :is(input,select,textarea)::placeholder{color:#8b93a4}
+html.light :is(input,select,textarea):focus{border-color:var(--violet);outline:2px solid rgba(106,52,204,.22);outline-offset:1px}
+/* ---- table / list rows ---- */
+html.light :is(.mkt-row,.note-x,.lrow,tbody tr):hover{background:rgba(17,21,38,.045)}
+/* ---- accents / misc ---- */
+html.light .entropy .secure,html.light .cf-head .up{color:var(--mint)}
+html.light .cf-chart svg line{stroke:rgba(17,21,38,.10)}
+/* remaining hardcoded-dark panels -> light surface */
+html.light :is(.lc-controls,.top,.joinbar,.chartdrop,.mp-explorer,.guides,.reward-tile,.vault-item,.product,.feature,.pillar,.lk-stat,.stat,.start,.winbar,.ftc,.fee,.cp-tip,.ins,.knob,.reveal,.pwreveal,.x-side,.wallet-dock){background:var(--ink-2);border-color:var(--line)}
+html.light .hero h1{background-image:linear-gradient(120deg,#241d44 0%,#9a6a08 48%,#6a34cc 100%)}
+/* white text that lands on light surfaces -> dark/readable */
+html.light :is(.mn-feat h4,.featured h2,.reward h4,.bigcell .bignum,.ind .val,.card-h h3,.cat h4,.tier .price,.ptable td:first-child,.xcard h4,.ftool-h h3,.privacy b,.optline .lab,.ledger li,.vote .vt,.lk-lead em,.lk-intro-line,.demobar b){color:var(--text)}
+html.light .cat{background:var(--ink-2)}
+html.light .lk-stat-big{background-image:linear-gradient(100deg,#6a34cc,#0a6f7a)}
+html.light .lk-eq-luck{background-image:linear-gradient(100deg,#8a6309,#b8730a)}
+/* ===== nav theme-toggle button (both modes) ===== */
+.mn-theme{flex:0 0 auto;width:44px;height:44px;border:1px solid var(--line-2);border-radius:12px;background:rgba(255,255,255,.05);color:var(--text);cursor:pointer;display:inline-flex;align-items:center;justify-content:center;font-size:1.15rem;line-height:1;padding:0;transition:transform .15s ease,border-color .15s ease,background .2s ease}
+.mn-theme:hover{border-color:var(--gold);transform:translateY(-1px)}
 </style>
 </head>
 <body>
@@ -630,6 +707,7 @@ html{overflow-x:hidden}
 
       <a class="mn-cta" href="pricing.html">Join VIP</a>
       <button class="mn-burger" id="mnBurger" type="button" aria-label="Open menu" aria-expanded="false"><span></span></button>
+      <button class="mn-theme" id="themeToggle" type="button" aria-label="Toggle light or dark theme" title="Toggle theme">☀️</button>
     </div>
   </div>
 
@@ -646,7 +724,7 @@ html{overflow-x:hidden}
   </aside>
 </nav>
 
-<section class="lk-hero">
+<section data-aos="fade" data-aos-duration="1200" class="lk-hero">
   <div class="wrap">
     <span class="eyebrow">The Luck Journal &middot; Philosophy</span>
     <h1 class="lk-h1">What is <span class="lk-grad">luck</span>?</h1>
@@ -657,7 +735,7 @@ html{overflow-x:hidden}
   </div>
 </section>
 
-<section class="wrap lk-sec">
+<section data-aos="fade-up" data-aos-duration="1200" class="wrap lk-sec">
   <div class="lk-callout">
     <span class="lk-quote-mark" aria-hidden="true">&ldquo;</span>
     <p class="lk-intro-line">Hello money making enthusiasts of YouTube! Welcome back to Luck Crypto &mdash; where preparation meets opportunity!</p>
@@ -668,7 +746,7 @@ html{overflow-x:hidden}
   </div>
 </section>
 
-<section class="wrap lk-sec">
+<section data-aos="fade-up" data-aos-duration="1200" class="wrap lk-sec">
   <span class="eyebrow">The myth</span>
   <h2 class="lk-h2">What people <em>think</em> luck is</h2>
   <div class="prose">
@@ -678,7 +756,7 @@ html{overflow-x:hidden}
   </div>
 </section>
 
-<section class="wrap lk-sec">
+<section data-aos="fade-up" data-aos-duration="1200" class="wrap lk-sec">
   <span class="eyebrow">The truth</span>
   <h2 class="lk-h2">What luck <em>actually</em> is</h2>
   <div class="lk-pull">
@@ -692,7 +770,7 @@ html{overflow-x:hidden}
   </div>
 </section>
 
-<section class="wrap lk-sec">
+<section data-aos="fade-up" data-aos-duration="1200" class="wrap lk-sec">
   <span class="eyebrow">Pure chance</span>
   <h2 class="lk-h2">The luck you&rsquo;d need to win <em>every</em> lottery on Luck.fyi</h2>
   <div class="prose">
@@ -709,7 +787,7 @@ html{overflow-x:hidden}
   </div>
 </section>
 
-<section class="wrap lk-sec lk-btc">
+<section data-aos="fade-up" data-aos-duration="1200" class="wrap lk-sec lk-btc">
   <span class="eyebrow lk-eye-orange">Preparation &times; opportunity &times; execution</span>
   <h2 class="lk-h2">The luck you&rsquo;d have needed to find Bitcoin in January 2009</h2>
   <div class="prose">
@@ -726,7 +804,7 @@ html{overflow-x:hidden}
   </div>
 </section>
 
-<section class="wrap lk-sec">
+<section data-aos="fade-up" data-aos-duration="1200" class="wrap lk-sec">
   <span class="eyebrow">The closer</span>
   <h2 class="lk-h2">Why &ldquo;they just got lucky&rdquo; is the most expensive thing you can say</h2>
   <div class="prose">
@@ -996,5 +1074,20 @@ html{overflow-x:hidden}
   var yr=document.getElementById('mfYr'); if(yr) yr.textContent=new Date().getFullYear();
 })();
 </script>
+
+<!--aos-init-->
+<noscript><style>[data-aos]{opacity:1!important;transform:none!important}</style></noscript>
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script>
+(function(){var rm=window.matchMedia&&window.matchMedia('(prefers-reduced-motion:reduce)').matches;
+function start(){if(rm)return;
+if(typeof AOS!=='undefined'&&AOS.init){try{AOS.init({duration:1200,once:true,offset:60,easing:'ease-out-cubic'});return;}catch(e){}}
+var els=[].slice.call(document.querySelectorAll('[data-aos]'));if(!els.length)return;
+if(!('IntersectionObserver'in window)){els.forEach(function(e){e.classList.add('aos-animate');});return;}
+var io=new IntersectionObserver(function(es){es.forEach(function(en){if(en.isIntersecting){en.target.classList.add('aos-animate');io.unobserve(en.target);}});},{threshold:0,rootMargin:'0px 0px -48px 0px'});
+els.forEach(function(e){io.observe(e);});}
+if(document.readyState!=='loading')start();else window.addEventListener('DOMContentLoaded',start);})();
+</script>
+<script>(function(){var b=document.getElementById("themeToggle");if(!b)return;var m=document.getElementById("themeColorMeta")||document.querySelector('meta[name="theme-color"]');function sync(){var l=document.documentElement.classList.contains("light");b.textContent=l?"☀️":"🌙";if(m)m.setAttribute("content",l?"#f5f6f9":"#131022");}sync();b.addEventListener("click",function(){var l=document.documentElement.classList.toggle("light");try{localStorage.setItem("luck-theme",l?"light":"dark");}catch(e){}sync();});})();</script>
 </body>
 </html>
