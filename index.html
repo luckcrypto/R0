@@ -126,6 +126,8 @@
     margin:.35em 0 .25em;max-width:14ch
   }
   .hero h1 .em{color:var(--gold)}
+.lk-grad{background:linear-gradient(100deg,var(--gold),#ffb24d 42%,var(--gold) 82%);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:transparent;background-size:220% 100%;animation:lkShine 6s ease-in-out infinite}
+@keyframes lkShine{0%,100%{background-position:0% 50%}50%{background-position:100% 50%}}
   .hero p.lead{font-size:1.12rem;color:var(--muted);max-width:46ch;margin:0 0 1.6em}
   .heroCtas{display:flex;flex-wrap:wrap;gap:12px;margin-bottom:14px}
   .trust{display:flex;flex-wrap:wrap;gap:18px;margin-top:26px;color:var(--muted);font-size:.85rem}
@@ -604,8 +606,8 @@ html.light .lk-eq-luck{background-image:linear-gradient(100deg,#8a6309,#b8730a)}
     <div class="container">
     <div class="row">
         <div class="col-md-6">
-            <div class="wrap"><span class="eyebrow">Free · No sign-up · Runs in your browser</span>
-                <h1>Your lucky numbers, <span class="em">drawn fair.</span></h1>
+            <div class="wrap"><h1>Your lucky numbers, <span class="lk-grad">drawn fair.</span></h1>
+                <span class="eyebrow" style="margin-top:.95em">Free · No sign-up · Runs in your browser</span>
                 <p class="lead">Pure random picks for Powerball, Mega Millions, EuroMillions and the world&#39;s biggest lotteries — plus live odds and crypto tools. No filters, no tricks.</p>
                 <div class="heroCtas"><a class="btn" href="#generators">Generate numbers </a><a class="btn ghost" href="biggest-lottery-odds.html">Explore the odds</a></div>
                 <div class="trust"><span><span class="tick">✓</span> 100% client-side</span><span><span class="tick">✓</span> Cryptographically strong RNG</span><span><span class="tick">✓</span> 10+ global lotteries</span></div>
@@ -843,8 +845,8 @@ html{overflow-x:hidden}
   .mf-news{display:flex;gap:8px;max-width:330px}
   .mf-news input{flex:1;min-width:0;background:var(--ink);border:1px solid var(--line-2);border-radius:10px;color:var(--text);font-family:var(--body);font-size:.86rem;padding:.6em .8em}
   .mf-news input:focus{outline:none;border-color:var(--gold)}
-  .mf-news button{flex:0 0 auto;font-family:var(--display);font-weight:700;font-size:.82rem;border:0;cursor:pointer;border-radius:10px;padding:0 1em;color:#fff;background:linear-gradient(135deg,#7c3aed,#5b21b6);transition:filter .15s}
-  .mf-news button:hover{filter:brightness(1.06)}
+  .mf-news button{width:100%;display:inline-flex;align-items:center;justify-content:center;font-family:var(--display);font-weight:700;font-size:1.02rem;letter-spacing:.2px;border:0;cursor:pointer;border-radius:12px;padding:.95em 1.7em;min-height:52px;color:#fff;background:linear-gradient(135deg,#7c3aed,#5b21b6);box-shadow:0 10px 24px -10px rgba(124,58,237,.55);transition:filter .15s,transform .15s}
+  .mf-news button:hover{filter:brightness(1.08);transform:translateY(-1px)}
   .mf-news-note{font-size:.72rem;color:var(--muted);margin:.6em 0 1.1em}
   .mf-soc{display:flex;flex-wrap:wrap;gap:8px}
   .mf-soc a{display:inline-flex;align-items:center;font-family:var(--display);font-weight:600;font-size:.76rem;color:var(--muted);border:1px solid var(--line-2);border-radius:999px;padding:.4em .8em;transition:.15s}
@@ -1228,10 +1230,9 @@ html{overflow-x:hidden}
         <a class="mf-logo" href="index.html"><svg class="mf-mark" viewBox="0 0 28 28" aria-hidden="true"><circle cx="14" cy="14" r="12" fill="url(#lk)"/><ellipse cx="10" cy="9.5" rx="3.6" ry="2.6" fill="rgba(255,255,255,.6)"/></svg>Luck<b>.fyi</b></a>
         <p>Transparent tools, fair-by-design games, and a community that prepares to meet opportunity.</p>
         <div class="mf-news">
-          <input type="email" placeholder="Email for drop-day alerts" aria-label="Email address">
-          <button type="button">Notify me</button>
+          <button type="button" id="nmOpen">Notify me</button>
         </div>
-        <p class="mf-news-note">No spam — launches &amp; big features only. (Wire to your provider later.)</p>
+        <p class="mf-news-note">No spam — launches &amp; big features only.</p>
         <div class="mf-soc">
           <a href="https://x.com/theLuckCrypto" target="_blank" rel="noopener">X · @theLuckCrypto</a>
           <a href="https://youtube.com/@LUCKCRYPTO" target="_blank" rel="noopener">YouTube · @LUCKCRYPTO</a>
@@ -1356,6 +1357,55 @@ html{overflow-x:hidden}
       </span>
     </div>
   </div>
+<style>
+.nm-overlay{position:fixed;inset:0;z-index:9999;display:flex;align-items:center;justify-content:center;padding:20px;background:rgba(8,6,22,.62);backdrop-filter:blur(3px);-webkit-backdrop-filter:blur(3px)}
+.nm-overlay[hidden]{display:none}
+.nm-dialog{position:relative;width:100%;max-width:420px;background:#1b1533;color:#e8ebf1;border:1px solid rgba(255,255,255,.12);border-radius:18px;padding:30px 26px 26px;box-shadow:0 30px 80px -20px rgba(0,0,0,.7);max-height:90vh;overflow:auto}
+html.light .nm-dialog{background:#fff;color:#11141a;border-color:rgba(0,0,0,.1);box-shadow:0 30px 80px -28px rgba(20,10,60,.4)}
+.nm-dialog h3{margin:0 0 6px;font-size:1.28rem;line-height:1.2}
+.nm-sub{margin:0 0 18px;font-size:.9rem;opacity:.72;line-height:1.5}
+.nm-close{position:absolute;top:12px;right:14px;background:none;border:none;color:inherit;font-size:1.7rem;line-height:1;cursor:pointer;opacity:.55;padding:4px 8px}
+.nm-close:hover{opacity:1}
+.nm-loading{font-size:.85rem;opacity:.6;padding:14px 0}
+.nm-host input[type=email],.nm-host input[type=text]{width:100%;box-sizing:border-box;padding:12px 14px;margin:6px 0;border-radius:10px;border:1px solid rgba(127,127,140,.35);background:rgba(127,127,140,.08);color:inherit;font-size:1rem}
+.nm-host button,.nm-host input[type=submit]{width:100%;padding:12px 16px;margin-top:8px;border:none;border-radius:10px;cursor:pointer;font-weight:700;color:#fff;background:linear-gradient(135deg,#7c3aed,#5b21b6)}
+.nm-host button:hover,.nm-host input[type=submit]:hover{filter:brightness(1.08)}
+@media(max-width:430px){.nm-dialog{padding:26px 18px}}
+</style>
+<div class="nm-overlay" id="nmOverlay" hidden>
+  <div class="nm-dialog" role="dialog" aria-modal="true" aria-labelledby="nmTitle">
+    <button class="nm-close" id="nmClose" type="button" aria-label="Close">&times;</button>
+    <h3 id="nmTitle">Get launch updates</h3>
+    <p class="nm-sub">Be first to know when new tools and draws go live. No spam, unsubscribe anytime.</p>
+    <div class="nm-host" id="nmHost"><div class="nm-loading" id="nmLoading">Loading the form…</div></div>
+  </div>
+</div>
+<script>
+(function(){
+  var ov=document.getElementById("nmOverlay"),ob=document.getElementById("nmOpen"),
+      cb=document.getElementById("nmClose"),host=document.getElementById("nmHost"),
+      loaded=false,lastFocus=null;
+  if(!ov||!ob)return;
+  function sizeFrame(fr){try{var d=fr.contentDocument;if(d&&d.body){var h=d.body.scrollHeight;if(h>40)fr.style.height=h+"px";}}catch(e){}}
+  function load(){
+    if(loaded)return;loaded=true;
+    var fr=document.createElement("iframe");
+    fr.src="notify-embed.html";fr.title="Newsletter signup";fr.setAttribute("scrolling","no");
+    fr.style.cssText="width:100%;border:0;height:320px;background:transparent;display:block";
+    fr.addEventListener("load",function(){
+      var l=document.getElementById("nmLoading");if(l)l.remove();
+      sizeFrame(fr);[300,900,1800,3200].forEach(function(t){setTimeout(function(){sizeFrame(fr);},t);});
+    });
+    host.appendChild(fr);
+  }
+  function openM(){lastFocus=document.activeElement;ov.hidden=false;document.documentElement.style.overflow="hidden";load();setTimeout(function(){cb&&cb.focus();},30);}
+  function closeM(){ov.hidden=true;document.documentElement.style.overflow="";if(lastFocus&&lastFocus.focus)lastFocus.focus();}
+  ob.addEventListener("click",openM);
+  cb&&cb.addEventListener("click",closeM);
+  ov.addEventListener("click",function(e){if(e.target===ov)closeM();});
+  document.addEventListener("keydown",function(e){if(e.key==="Escape"&&!ov.hidden)closeM();});
+})();
+</script>
 </footer>
 
 <script type="application/ld+json">
