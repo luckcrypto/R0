@@ -1,0 +1,8 @@
+# luck.fyi
+User-agent: *
+Allow: /
+
+# Internal template — not a public page
+Disallow: /mega-nav-footer-test.html
+
+Sitemap: https://luck.fyi/sitemap.xml

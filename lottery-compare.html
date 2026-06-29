@@ -441,6 +441,7 @@ html.light .lk-eq-luck{background-image:linear-gradient(100deg,#8a6309,#b8730a)}
 .mn-theme{flex:0 0 auto;width:44px;height:44px;border:1px solid var(--line-2);border-radius:12px;background:rgba(255,255,255,.05);color:var(--text);cursor:pointer;display:inline-flex;align-items:center;justify-content:center;font-size:1.15rem;line-height:1;padding:0;transition:transform .15s ease,border-color .15s ease,background .2s ease}
 .mn-theme:hover{border-color:var(--gold);transform:translateY(-1px)}
 </style>
+<style>.mn-feats{display:flex;flex-direction:column;gap:12px;align-self:start}.mn-feats>.mn-feat{min-height:132px}.mn-shopgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}.mn-shop{display:flex;flex-direction:column;border:1px solid var(--line);border-radius:13px;overflow:hidden;background:var(--ink-3);transition:transform .15s,border-color .15s,box-shadow .15s}.mn-shop:hover{transform:translateY(-3px);border-color:var(--gold);box-shadow:0 10px 22px -14px rgba(0,0,0,.7)}.mn-shop-thumb{display:block;background:#f4f2ee}.mn-shop-img{width:100%;aspect-ratio:1/1;object-fit:contain;display:block;padding:6px}.mn-shop .lbl{font-family:var(--display);font-weight:600;font-size:.76rem;color:var(--text);padding:7px 8px 9px;text-align:center;line-height:1.2}.mn-feat-solo{align-self:start}</style>
 </head>
 <body>
 
@@ -459,14 +460,16 @@ html.light .lk-eq-luck{background-image:linear-gradient(100deg,#8a6309,#b8730a)}
         <div class="mn-group" data-key="lottery">
           <button class="mn-top" type="button" aria-expanded="false" aria-haspopup="true"><svg class="gi" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><circle cx="10" cy="10" r="7.2"/><path d="M6.4 7.4a5.2 5.2 0 016 0"/></svg>Lottery<i class="caret"></i></button>
           <div class="mn-panel" role="menu">
-            <div class="mn-panel-inner" style="grid-template-columns:1fr 2.1fr 1fr 1.15fr">
+            <div class="mn-panel-inner" style="grid-template-columns:1fr 2fr 2fr 1.15fr">
               <div>
                 <div class="mn-col-h">Browse</div>
                 <a class="mn-link" href="lottery-number-generator.html"><span class="lbl">All generators</span><span class="arr">&rarr;</span></a>
                 <a class="mn-link" href="biggest-lottery-odds.html"><span class="lbl">World odds</span><span class="arr">&rarr;</span></a>
-                <div class="mn-col-h mt">Odds &amp; results</div>
-                <a class="mn-link" href="powerball.html"><span class="lbl">Powerball odds</span><span class="arr">&rarr;</span></a>
-                <a class="mn-link" href="powerball-results.html"><span class="lbl">Latest results</span><span class="arr">&rarr;</span></a>
+                <div class="mn-col-h mt">Compare</div>
+                <a class="mn-link" href="lottery-compare.html"><span class="lbl">Compare</span><span class="tag">New</span></a>
+                <div class="mn-col-h mt">More</div>
+                <a class="mn-link" href="latest-results.html"><span class="lbl">Latest results</span><span class="arr">&rarr;</span></a>
+                <a class="mn-link" href="el-gordo-de-navidad.html"><span class="lbl">El Gordo de Navidad</span><span class="tag fest">Festive</span></a>
                 <div class="mn-col-h mt">Provably fair</div>
                 <a class="mn-link" href="national-lottery-generator-entropy.html"><span class="lbl">SHA-256 generator</span><span class="tag">Premium</span></a>
               </div>
@@ -474,32 +477,57 @@ html.light .lk-eq-luck{background-image:linear-gradient(100deg,#8a6309,#b8730a)}
                 <div class="mn-col-h">Number generators</div>
                 <div class="gens">
                   <a class="mn-link" href="powerball-generator.html"><span class="lbl">Powerball</span><span class="cc">US</span></a>
-                  <a class="mn-link" href="thunderball-generator.html"><span class="lbl">Thunderball</span><span class="cc">UK</span></a>
                   <a class="mn-link" href="mega-millions-generator.html"><span class="lbl">Mega Millions</span><span class="cc">US</span></a>
-                  <a class="mn-link" href="set-for-life-generator.html"><span class="lbl">Set For Life</span><span class="cc">UK</span></a>
                   <a class="mn-link" href="euromillions-generator.html"><span class="lbl">EuroMillions</span><span class="cc">EU</span></a>
-                  <a class="mn-link" href="german-lotto-6aus49-generator.html"><span class="lbl">6aus49</span><span class="cc">DE</span></a>
                   <a class="mn-link" href="eurojackpot-generator.html"><span class="lbl">EuroJackpot</span><span class="cc">EU</span></a>
-                  <a class="mn-link" href="mega-sena-generator.html"><span class="lbl">Mega-Sena</span><span class="cc">BR</span></a>
                   <a class="mn-link" href="national-lottery-generator.html"><span class="lbl">UK Lotto</span><span class="cc">UK</span></a>
-                  <a class="mn-link" href="lotto-max-generator.html"><span class="lbl">Lotto Max</span><span class="cc">CA</span></a>
-                  <a class="mn-link" href="superenalotto-generator.html"><span class="lbl">SuperEnalotto</span><span class="cc">IT</span></a>
-                  <a class="mn-link" href="french-loto-generator.html"><span class="lbl">French Loto</span><span class="cc">FR</span></a>
-                  <a class="mn-link" href="la-primitiva-generator.html"><span class="lbl">La Primitiva</span><span class="cc">ES</span></a>
+                  <a class="mn-link" href="thunderball-generator.html"><span class="lbl">Thunderball</span><span class="cc">UK</span></a>
+                  <a class="mn-link" href="set-for-life-generator.html"><span class="lbl">Set For Life</span><span class="cc">UK</span></a>
                   <a class="mn-link" href="irish-lotto-generator.html"><span class="lbl">Irish Lotto</span><span class="cc">IE</span></a>
+                  <a class="mn-link" href="superenalotto-generator.html"><span class="lbl">SuperEnalotto</span><span class="cc">IT</span></a>
+                  <a class="mn-link" href="la-primitiva-generator.html"><span class="lbl">La Primitiva</span><span class="cc">ES</span></a>
+                  <a class="mn-link" href="german-lotto-6aus49-generator.html"><span class="lbl">6aus49</span><span class="cc">DE</span></a>
+                  <a class="mn-link" href="french-loto-generator.html"><span class="lbl">French Loto</span><span class="cc">FR</span></a>
                   <a class="mn-link" href="oz-lotto-generator.html"><span class="lbl">Oz Lotto</span><span class="cc">AU</span></a>
+                  <a class="mn-link" href="lotto-max-generator.html"><span class="lbl">Lotto Max</span><span class="cc">CA</span></a>
+                  <a class="mn-link" href="mega-sena-generator.html"><span class="lbl">Mega-Sena</span><span class="cc">BR</span></a>
                   <a class="mn-link" href="lotto-america-generator.html"><span class="lbl">Lotto America</span><span class="cc">US</span></a>
+                  <a class="mn-link" href="double-color-ball-generator.html"><span class="lbl">Double Color Ball</span><span class="cc">CN</span></a>
+                  <a class="mn-link" href="china-super-lotto-generator.html"><span class="lbl">China Super Lotto</span><span class="cc">CN</span></a>
                 </div>
               </div>
               <div>
-                <div class="mn-col-h">Special games</div>
-                <a class="mn-link" href="double-color-ball-generator.html"><span class="lbl">Double Color Ball</span><span class="cc">CN</span></a>
-                <a class="mn-link" href="china-super-lotto-generator.html"><span class="lbl">China Super Lotto</span><span class="cc">CN</span></a>
-                <a class="mn-link" href="el-gordo-de-navidad.html"><span class="lbl">El Gordo de Navidad</span><span class="tag fest">Festive</span></a>
+                <div class="mn-col-h">Odds &amp; statistics</div>
+                <div class="gens">
+                  <a class="mn-link" href="powerball.html"><span class="lbl">Powerball</span><span class="cc">US</span></a>
+                  <a class="mn-link" href="mega-millions.html"><span class="lbl">Mega Millions</span><span class="cc">US</span></a>
+                  <a class="mn-link" href="euromillions.html"><span class="lbl">EuroMillions</span><span class="cc">EU</span></a>
+                  <a class="mn-link" href="eurojackpot.html"><span class="lbl">EuroJackpot</span><span class="cc">EU</span></a>
+                  <a class="mn-link" href="national-lottery.html"><span class="lbl">UK Lotto</span><span class="cc">UK</span></a>
+                  <a class="mn-link" href="thunderball.html"><span class="lbl">Thunderball</span><span class="cc">UK</span></a>
+                  <a class="mn-link" href="set-for-life.html"><span class="lbl">Set For Life</span><span class="cc">UK</span></a>
+                  <a class="mn-link" href="irish-lotto.html"><span class="lbl">Irish Lotto</span><span class="cc">IE</span></a>
+                  <a class="mn-link" href="superenalotto.html"><span class="lbl">SuperEnalotto</span><span class="cc">IT</span></a>
+                  <a class="mn-link" href="la-primitiva.html"><span class="lbl">La Primitiva</span><span class="cc">ES</span></a>
+                  <a class="mn-link" href="german-lotto-6aus49.html"><span class="lbl">6aus49</span><span class="cc">DE</span></a>
+                  <a class="mn-link" href="french-loto.html"><span class="lbl">French Loto</span><span class="cc">FR</span></a>
+                  <a class="mn-link" href="oz-lotto.html"><span class="lbl">Oz Lotto</span><span class="cc">AU</span></a>
+                  <a class="mn-link" href="lotto-max.html"><span class="lbl">Lotto Max</span><span class="cc">CA</span></a>
+                  <a class="mn-link" href="mega-sena.html"><span class="lbl">Mega-Sena</span><span class="cc">BR</span></a>
+                  <a class="mn-link" href="lotto-america.html"><span class="lbl">Lotto America</span><span class="cc">US</span></a>
+                  <a class="mn-link" href="double-color-ball.html"><span class="lbl">Double Color Ball</span><span class="cc">CN</span></a>
+                  <a class="mn-link" href="china-super-lotto.html"><span class="lbl">China Super Lotto</span><span class="cc">CN</span></a>
+                </div>
               </div>
-              <div class="mn-feat">
-                <div><div class="fe">Members only</div><h4>SHA-256 provably-fair</h4><p>Seed your own entropy, verify every draw. The premium generators.</p></div>
-                <a class="fcta" href="pricing.html">Go VIP &rarr;</a>
+              <div class="mn-feats">
+                <div class="mn-feat">
+                  <div><div class="fe">Members only</div><h4>SHA-256 provably-fair</h4><p>Seed your own entropy, verify every draw.</p></div>
+                  <a class="fcta" href="pricing.html">Go VIP &rarr;</a>
+                </div>
+                <div class="mn-feat">
+                  <div><div class="fe">18 games &middot; side by side</div><h4>Find your best odds</h4><p>Sort, filter &amp; visualise every lottery.</p></div>
+                  <a class="fcta" href="lottery-compare.html">Compare &rarr;</a>
+                </div>
               </div>
             </div>
           </div>
@@ -539,7 +567,6 @@ html.light .lk-eq-luck{background-image:linear-gradient(100deg,#8a6309,#b8730a)}
             <div class="mn-panel-inner" style="grid-template-columns:1.3fr 1.2fr">
               <div>
                 <div class="mn-col-h">Membership</div>
-                <a class="mn-link" href="user.html"><span class="lbl">My VIP profile</span><span class="arr">&rarr;</span></a>
                 <a class="mn-link" href="community.html"><span class="lbl">Community</span><span class="arr">&rarr;</span></a>
                 <a class="mn-link" href="dashboard.html"><span class="lbl">My dashboard</span><span class="arr">&rarr;</span></a>
                 <a class="mn-link" href="pricing.html"><span class="lbl">Pricing &amp; tiers</span><span class="arr">&rarr;</span></a>
@@ -577,7 +604,7 @@ html.light .lk-eq-luck{background-image:linear-gradient(100deg,#8a6309,#b8730a)}
 
         <!-- ABOUT -->
         <div class="mn-group" data-key="about">
-          <button class="mn-top" type="button" aria-expanded="false" aria-haspopup="true">About<i class="caret"></i></button>
+          <button class="mn-top" type="button" aria-expanded="false" aria-haspopup="true"><svg class="gi" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="10" cy="10" r="7.3"/><path d="M10 9.2v3.6"/><path d="M10 6.6h.01"/></svg>About<i class="caret"></i></button>
           <div class="mn-panel" role="menu">
             <div class="mn-panel-inner" style="grid-template-columns:1fr 1fr 1.2fr">
               <div>
@@ -599,7 +626,29 @@ html.light .lk-eq-luck{background-image:linear-gradient(100deg,#8a6309,#b8730a)}
         </div>
 
         <!-- SHOP (direct link) -->
-        <a class="mn-top mn-direct" href="shop.html" data-key="shop">Shop</a>
+        <!-- SHOP -->
+        <div class="mn-group" data-key="shop">
+          <button class="mn-top" type="button" aria-expanded="false" aria-haspopup="true"><svg class="gi" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5.6 6.8h8.8l-.7 8.4a1.1 1.1 0 0 1-1.1 1H7.4a1.1 1.1 0 0 1-1.1-1z"/><path d="M7.7 6.8a2.3 2.3 0 0 1 4.6 0"/></svg>Shop<i class="caret"></i></button>
+          <div class="mn-panel" role="menu">
+            <div class="mn-panel-inner" style="grid-template-columns:2.5fr 1fr">
+              <div>
+                <div class="mn-col-h">Featured products</div>
+                <div class="mn-shopgrid">
+                  <a class="mn-shop" href="https://shop.luck.fyi/products/lucky-man-premium-t-shirt" target="_blank" rel="noopener"><span class="mn-shop-thumb"><img class="mn-shop-img" src="assets/img/lucky-man-tee.webp" alt="Lucky Man premium t-shirt" loading="lazy"></span><span class="lbl">Lucky Man tee</span></a>
+                  <a class="mn-shop" href="https://shop.luck.fyi/products/lucky-woman-premium-embroidered-tshirt" target="_blank" rel="noopener"><span class="mn-shop-thumb"><img class="mn-shop-img" src="assets/img/lucky-woman-tee.webp" alt="Lucky Woman premium embroidered t-shirt" loading="lazy"></span><span class="lbl">Lucky Woman tee</span></a>
+                  <a class="mn-shop" href="https://shop.luck.fyi/products/lucky-man-hat-embroidered" target="_blank" rel="noopener"><span class="mn-shop-thumb"><img class="mn-shop-img" src="assets/img/lucky-man-cap.webp" alt="Lucky Man embroidered hat" loading="lazy"></span><span class="lbl">Lucky Man cap</span></a>
+                  <a class="mn-shop" href="https://shop.luck.fyi/products/lucky-woman-hat-embroidered" target="_blank" rel="noopener"><span class="mn-shop-thumb"><img class="mn-shop-img" src="assets/img/lucky-woman-cap.webp" alt="Lucky Woman embroidered hat" loading="lazy"></span><span class="lbl">Lucky Woman cap</span></a>
+                  <a class="mn-shop" href="https://shop.luck.fyi/products/lucky-cup" target="_blank" rel="noopener"><span class="mn-shop-thumb"><img class="mn-shop-img" src="assets/img/lucky-cup.webp" alt="Lucky Cup mug, white" loading="lazy"></span><span class="lbl">Lucky Cup</span></a>
+                  <a class="mn-shop" href="https://shop.luck.fyi/products/lucky-cup-black" target="_blank" rel="noopener"><span class="mn-shop-thumb"><img class="mn-shop-img" src="assets/img/lucky-cup-black.webp" alt="Lucky Cup mug, black" loading="lazy"></span><span class="lbl">Lucky Cup (black)</span></a>
+                </div>
+              </div>
+              <div class="mn-feat mn-feat-solo">
+                <div><div class="fe">Wear your luck</div><h4>The Luck.fyi shop</h4><p>Tees, caps &amp; mugs &mdash; printed on demand, shipped worldwide.</p></div>
+                <a class="fcta" href="https://shop.luck.fyi" target="_blank" rel="noopener">Visit the shop &rarr;</a>
+              </div>
+            </div>
+          </div>
+        </div>
 
       </div>
 
@@ -754,9 +803,10 @@ html.light .lk-eq-luck{background-image:linear-gradient(100deg,#8a6309,#b8730a)}
         <h4>Lottery</h4>
         <ul>
           <li><a href="lottery-number-generator.html">All generators</a></li>
+          <li><a href="lottery-compare.html">Compare lotteries</a></li>
           <li><a href="biggest-lottery-odds.html">World odds</a></li>
           <li><a href="powerball.html">Powerball odds</a></li>
-          <li><a href="powerball-results.html">Latest results</a></li>
+          <li><a href="latest-results.html">Latest results</a></li>
           <li><a href="national-lottery-generator-entropy.html">SHA-256 entropy</a></li>
         </ul>
       </div>
@@ -778,7 +828,6 @@ html.light .lk-eq-luck{background-image:linear-gradient(100deg,#8a6309,#b8730a)}
       <div>
         <h4>VIP</h4>
         <ul>
-          <li><a href="user.html">My VIP profile</a></li>
           <li><a href="dashboard.html">My dashboard</a></li>
           <li><a href="community.html">Community</a></li>
           <li><a href="pricing.html">Pricing &amp; tiers</a></li>
@@ -812,18 +861,45 @@ html.light .lk-eq-luck{background-image:linear-gradient(100deg,#8a6309,#b8730a)}
         <a href="national-lottery-generator.html"><span>UK Lotto</span><span class="cc">UK</span></a>
         <a href="thunderball-generator.html"><span>Thunderball</span><span class="cc">UK</span></a>
         <a href="set-for-life-generator.html"><span>Set For Life</span><span class="cc">UK</span></a>
+        <a href="irish-lotto-generator.html"><span>Irish Lotto</span><span class="cc">IE</span></a>
         <a href="superenalotto-generator.html"><span>SuperEnalotto</span><span class="cc">IT</span></a>
         <a href="la-primitiva-generator.html"><span>La Primitiva</span><span class="cc">ES</span></a>
-        <a href="oz-lotto-generator.html"><span>Oz Lotto</span><span class="cc">AU</span></a>
         <a href="german-lotto-6aus49-generator.html"><span>Lotto 6aus49</span><span class="cc">DE</span></a>
-        <a href="mega-sena-generator.html"><span>Mega-Sena</span><span class="cc">BR</span></a>
-        <a href="lotto-max-generator.html"><span>Lotto Max</span><span class="cc">CA</span></a>
         <a href="french-loto-generator.html"><span>French Loto</span><span class="cc">FR</span></a>
-        <a href="irish-lotto-generator.html"><span>Irish Lotto</span><span class="cc">IE</span></a>
+        <a href="oz-lotto-generator.html"><span>Oz Lotto</span><span class="cc">AU</span></a>
+        <a href="lotto-max-generator.html"><span>Lotto Max</span><span class="cc">CA</span></a>
+        <a href="mega-sena-generator.html"><span>Mega-Sena</span><span class="cc">BR</span></a>
         <a href="lotto-america-generator.html"><span>Lotto America</span><span class="cc">US</span></a>
         <a href="double-color-ball-generator.html"><span>Double Color Ball</span><span class="cc">CN</span></a>
         <a href="china-super-lotto-generator.html"><span>China Super Lotto</span><span class="cc">CN</span></a>
         <a href="el-gordo-de-navidad.html"><span>El Gordo de Navidad</span><span class="tag">Festive</span></a>
+      </div>
+    </div>
+
+    <div class="mf-gens">
+      <div class="mf-gens-head">
+        <h4>Every lottery&rsquo;s odds &amp; stats</h4>
+        <a href="biggest-lottery-odds.html">View all &rarr;</a>
+      </div>
+      <div class="mf-gens-grid">
+        <a href="powerball.html"><span>Powerball</span><span class="cc">US</span></a>
+        <a href="mega-millions.html"><span>Mega Millions</span><span class="cc">US</span></a>
+        <a href="euromillions.html"><span>EuroMillions</span><span class="cc">EU</span></a>
+        <a href="eurojackpot.html"><span>EuroJackpot</span><span class="cc">EU</span></a>
+        <a href="national-lottery.html"><span>UK Lotto</span><span class="cc">UK</span></a>
+        <a href="thunderball.html"><span>Thunderball</span><span class="cc">UK</span></a>
+        <a href="set-for-life.html"><span>Set For Life</span><span class="cc">UK</span></a>
+        <a href="irish-lotto.html"><span>Irish Lotto</span><span class="cc">IE</span></a>
+        <a href="superenalotto.html"><span>SuperEnalotto</span><span class="cc">IT</span></a>
+        <a href="la-primitiva.html"><span>La Primitiva</span><span class="cc">ES</span></a>
+        <a href="german-lotto-6aus49.html"><span>6aus49</span><span class="cc">DE</span></a>
+        <a href="french-loto.html"><span>French Loto</span><span class="cc">FR</span></a>
+        <a href="oz-lotto.html"><span>Oz Lotto</span><span class="cc">AU</span></a>
+        <a href="lotto-max.html"><span>Lotto Max</span><span class="cc">CA</span></a>
+        <a href="mega-sena.html"><span>Mega-Sena</span><span class="cc">BR</span></a>
+        <a href="lotto-america.html"><span>Lotto America</span><span class="cc">US</span></a>
+        <a href="double-color-ball.html"><span>Double Color Ball</span><span class="cc">CN</span></a>
+        <a href="china-super-lotto.html"><span>China Super Lotto</span><span class="cc">CN</span></a>
       </div>
     </div>
 
