@@ -625,32 +625,6 @@ html.light .lk-eq-luck{background-image:linear-gradient(100deg,#8a6309,#b8730a)}
         </div>
     </div>
 </div>
-
-    <!-- SIGNATURE: the draw machine -->
-    <div class="machine" id="machine">
-      <div class="label">
-        <span>Try it — a fair draw in one tap</span>
-        <span class="live">live · crypto RNG</span>
-      </div>
-      <div class="mc-games" role="group" aria-label="Choose a game">
-        <button type="button" class="mc-game on" data-mc="powerball">🇺🇸 Powerball</button>
-        <button type="button" class="mc-game" data-mc="mega">🇺🇸 Mega Millions</button>
-        <button type="button" class="mc-game" data-mc="euro">🇪🇺 EuroMillions</button>
-        <button type="button" class="mc-game" data-mc="uklotto">🇬🇧 UK Lotto</button>
-        <button type="button" class="mc-game" data-mc="superena">🇮🇹 SuperEnalotto</button>
-        <button type="button" class="mc-game" data-mc="eurojackpot">🇪🇺 EuroJackpot</button>
-        <button type="button" class="mc-game" data-mc="primitiva">🇪🇸 La Primitiva</button>
-        <button type="button" class="mc-game" data-mc="ozlotto">🇦🇺 Oz Lotto</button>
-      </div>
-      <div class="ballrow" id="heroBalls" aria-label="Sample lucky numbers"></div>
-      <div class="mc-foot">
-        <span class="mc-meta" id="mcMeta"></span>
-        <div class="mc-actions">
-          <button class="btn mc-draw" id="mcDraw" type="button">🎲 Draw again</button>
-          <a class="btn ghost" id="mcFull" href="powerball-generator.html">Full generator →</a>
-        </div>
-      </div>
-    </div>
   </div>
 </section>
 
@@ -1200,6 +1174,37 @@ html{overflow-x:hidden}
       <details><summary>What is the SHA-256 (entropy) generator?</summary><div class="ans">An optional mode where your own mouse or finger movement is hashed with SHA-256 to seed the draw — extra-strong, one-time randomness. It doesn't change your odds, only the quality of the randomness.</div></details>
       <details><summary>Do you store the numbers I generate?</summary><div class="ans">No. Generation happens locally and privately; nothing is logged or saved by us.</div></details>
       <details><summary>Why does a lottery site also have crypto tools?</summary><div class="ans">They share a foundation: SHA-256, the hash that secures Bitcoin, also powers our entropy generators. So we include a live <a href="crypto.html">crypto tracker</a> and a <a href="seed-phrase-generator.html">BIP39 seed phrase tool</a> — same principle of verifiable fairness.</div></details>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Try-it draw machine (moved below FAQ) ===== -->
+<section data-aos="fade-up" data-aos-duration="1200" class="section" style="padding-top:0">
+  <div class="wrap">
+    <!-- SIGNATURE: the draw machine -->
+    <div class="machine" id="machine">
+      <div class="label">
+        <span>Try it — a fair draw in one tap</span>
+        <span class="live">live · crypto RNG</span>
+      </div>
+      <div class="mc-games" role="group" aria-label="Choose a game">
+        <button type="button" class="mc-game on" data-mc="powerball">🇺🇸 Powerball</button>
+        <button type="button" class="mc-game" data-mc="mega">🇺🇸 Mega Millions</button>
+        <button type="button" class="mc-game" data-mc="euro">🇪🇺 EuroMillions</button>
+        <button type="button" class="mc-game" data-mc="uklotto">🇬🇧 UK Lotto</button>
+        <button type="button" class="mc-game" data-mc="superena">🇮🇹 SuperEnalotto</button>
+        <button type="button" class="mc-game" data-mc="eurojackpot">🇪🇺 EuroJackpot</button>
+        <button type="button" class="mc-game" data-mc="primitiva">🇪🇸 La Primitiva</button>
+        <button type="button" class="mc-game" data-mc="ozlotto">🇦🇺 Oz Lotto</button>
+      </div>
+      <div class="ballrow" id="heroBalls" aria-label="Sample lucky numbers"></div>
+      <div class="mc-foot">
+        <span class="mc-meta" id="mcMeta"></span>
+        <div class="mc-actions">
+          <button class="btn mc-draw" id="mcDraw" type="button">🎲 Draw again</button>
+          <a class="btn ghost" id="mcFull" href="powerball-generator.html">Full generator →</a>
+        </div>
+      </div>
     </div>
   </div>
 </section>
